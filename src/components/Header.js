@@ -3,7 +3,7 @@ import { SidebarContext } from "../contexts/SidebarContext"
 import { CartContext } from "../contexts/CartContext"
 import { BsBag } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import Logo from "../img/logo.svg"
+import Logo from "../img/logo.webp"
 
 const Header = () => {
   //header state

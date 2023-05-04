@@ -29,7 +29,7 @@ const Product = ({ product }) => {
           {/* image */}
           <div className="w-[200px] mx-auto flex justify-center items-center">
             <img
-              className="max-h-[160px] group-hover:scale-110 transition duration-300"
+              className="max-h-[160px] object-scale-down group-hover:scale-110 transition duration-300"
               src={image}
               alt="Product"
             />
@@ -39,7 +39,7 @@ const Product = ({ product }) => {
         {/* buttons */}
 
         <div className="absolute top-6 -right-11 group-hover:right-5  p-2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <button onClick={addedToCartFunc}>
+          <button onClick={addedToCartFunc} aria-label="Add to cart button">
             <div className="flex justify-center items-center text-white w-12 h-12 bg-red-500 rounded-sm hover:bg-red-800">
               <BsPlus className="text-3xl" />
             </div>
@@ -48,6 +48,7 @@ const Product = ({ product }) => {
           <Link
             to={`/product/${id}`}
             className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl rounded-sm hover:bg-gray-300"
+            aria-label="View this product"
           >
             <BsEyeFill />
           </Link>
